@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "workspaces": [
+    "starters/*",
+    "themes/*"
+  ],
+  "name": "gatsby-theme-ball-dev-root",
+  "devDependencies": {
+    "@testing-library/cypress": "^6.0.1",
+    "axe-core": "^4.0.1",
+    "cypress": "^5.0.0",
+    "cypress-axe": "^0.8.1",
+    "gatsby-cypress": "^0.4.10",
+    "lerna": "^3.22.1",
+    "start-server-and-test": "^1.11.3"
+  },
+  "scripts": {
+    "start": "yarn workspace gatsby-starter-ball-dev develop",
+    "develop:bd": "yarn workspace gatsby-starter-ball-dev develop",
+    "build:bd": "yarn workspace gatsby-starter-ball-dev build",
+    "serve:bd": "yarn workspace gatsby-starter-ball-dev serve",
+    "clean:bd": "yarn workspace gatsby-starter-ball-dev clean",
+    "test:bd": "start-server-and-test develop:bd http://localhost:8000 cy:open",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  }
+}
